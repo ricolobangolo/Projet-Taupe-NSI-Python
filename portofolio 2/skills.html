@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="skill-tree">
+            <h2>Arbre de Compétences</h2>
+            
+            <div class="tree-container">
+                <!-- Compétences Techniques -->
+                <div class="skill-branch">
+                    <div class="skill-node main-skill">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Compétences Techniques</h3>
+                    </div>
+                    
+                    <div class="skill-subnodes">
+                        <div class="skill-node">
+                            <i class="fas fa-code"></i>
+                            <h4>Langages de Programmation</h4>
+                            <ul>
+                                <li>Python (Analyse de données, Automatisation)</li>
+                                <li>C (Programmation système, Algorithmes)</li>
+                                <li>JavaScript (Frontend, Interactivité)</li>
+                                <li>PHP (Développement backend)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-node">
+                            <i class="fas fa-globe"></i>
+                            <h4>Technologies Web</h4>
+                            <ul>
+                                <li>HTML5 & CSS3 (Responsive Design)</li>
+                                <li>Bootstrap (Framework CSS)</li>
+                                <li>MySQL (Bases de données)</li>
+                                <li>Git (Contrôle de version)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-node">
+                            <i class="fas fa-tools"></i>
+                            <h4>Outils & Environnements</h4>
+                            <ul>
+                                <li>Linux/Unix</li>
+                                <li>Visual Studio Code</li>
+                                <li>GitHub</li>
+                                <li>Shell scripting</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-node">
+                            <i class="fas fa-network-wired"></i>
+                            <h4>Systèmes & Réseaux</h4>
+                            <ul>
+                                <li>Administration systèmes Windows</li>
+                                <li>Configuration réseaux</li>
+                                <li>Maintenance informatique Windows/Hardware</li>
+                                <li>Sécurité des systèmes</li>
+                                <li>Installation et déploiement Windows</li>
+                                <li>Optimisation des performances système</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-node">
+                            <i class="fas fa-headset"></i>
+                            <h4>Support & Assistance</h4>
+                            <ul>
+                                <li>Support technique Windows niveau 1-2</li>
+                                <li>Dépannage matériel et logiciel</li>
+                                <li>Formation utilisateurs Windows</li>
+                                <li>Documentation technique</li>
+                                <li>Résolution des problèmes système</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-node">
+                            <i class="fas fa-project-diagram"></i>
+                            <h4>Gestion de Systèmes</h4>
+                            <ul>
+                                <li>Administration SI</li>
+                                <li>Gestion des accès</li>
+                                <li>Surveillance système</li>
+                                <li>Optimisation performances</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences de Management -->
+                <div class="skill-branch">
+                    <div class="skill-node main-skill">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Gestion de Projet</h3>
+                    </div>
+                    
+                    <div class="skill-subnodes">
+                        <div class="skill-node">
+                            <i class="fas fa-users-cog"></i>
+                            <h4>Travail d'Équipe</h4>
+                            <ul>
+                                <li>Leadership collaboratif</li>
+                                <li>Coordination d'équipe</li>
+                                <li>Gestion de conflits</li>
+                                <li>Communication efficace</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-node">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Méthodologies</h4>
+                            <ul>
+                                <li>Méthode Agile</li>
+                                <li>Gestion du temps</li>
+                                <li>Organisation de projet</li>
+                                <li>Documentation technique</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-node">
+                            <i class="fas fa-lightbulb"></i>
+                            <h4>Résolution de Problèmes</h4>
+                            <ul>
+                                <li>Analyse systémique</li>
+                                <li>Pensée critique</li>
+                                <li>Innovation</li>
+                                <li>Prise de décision</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-node">
+                            <i class="fas fa-tasks"></i>
+                            <h4>Gestion de Projet Avancée</h4>
+                            <ul>
+                                <li>Planification stratégique</li>
+                                <li>Gestion des risques</li>
+                                <li>Coordination d'équipe</li>
+                                <li>Suivi et reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences Personnelles -->
+                <div class="skill-branch">
+                    <div class="skill-node main-skill">
+                        <i class="fas fa-brain"></i>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    
+                    <div class="skill-subnodes">
+                        <div class="skill-node">
+                            <i class="fas fa-comments"></i>
+                            <h4>Communication</h4>
+                            <ul>
+                                <li>Présentation en public</li>
+                                <li>Rédaction technique</li>
+                                <li>Communication interculturelle</li>
+                                <li>Écoute active</li>
+                                <li>Négociation</li>
+                                <li>Vulgarisation technique</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-node">
+                            <i class="fas fa-sync-alt"></i>
+                            <h4>Adaptabilité</h4>
+                            <ul>
+                                <li>Apprentissage rapide</li>
+                                <li>Flexibilité</li>
+                                <li>Gestion du changement</li>
+                                <li>Résilience</li>
+                                <li>Polyvalence</li>
+                                <li>Gestion du stress</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-node">
+                            <i class="fas fa-star"></i>
+                            <h4>Qualités Professionnelles</h4>
+                            <ul>
+                                <li>Autonomie</li>
+                                <li>Rigueur</li>
+                                <li>Créativité</li>
+                                <li>Initiative</li>
+                                <li>Persévérance</li>
+                                <li>Sens des responsabilités</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-node">
+                            <i class="fas fa-users"></i>
+                            <h4>Intelligence Émotionnelle</h4>
+                            <ul>
+                                <li>Empathie</li>
+                                <li>Conscience de soi</li>
+                                <li>Gestion des émotions</li>
+                                <li>Motivation intrinsèque</li>
+                                <li>Compétences sociales</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-node">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <h4>Résolution de Problèmes</h4>
+                            <ul>
+                                <li>Pensée analytique</li>
+                                <li>Pensée créative</li>
+                                <li>Prise de décision</li>
+                                <li>Approche méthodique</li>
+                                <li>Esprit critique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Langues et Communication -->
+                <div class="skill-branch">
+                    <div class="skill-node main-skill">
+                        <i class="fas fa-language"></i>
+                        <h3>Langues</h3>
+                    </div>
+                    
+                    <div class="skill-subnodes">
+                        <div class="skill-node">
+                            <i class="fas fa-flag"></i>
+                            <h4>Français</h4>
+                            <ul>
+                                <li>Langue maternelle</li>
+                                <li>Communication professionnelle</li>
+                                <li>Rédaction technique</li>
+                                <li>Présentation formelle</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-node">
+                            <i class="fas fa-flag-usa"></i>
+                            <h4>Anglais (B2)</h4>
+                            <ul>
+                                <li>Communication courante</li>
+                                <li>Documentation technique</li>
+                                <li>Présentation professionnelle</li>
+                                <li>Veille technologique</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-node">
+                            <i class="fas fa-flag"></i>
+                            <h4>Italien (A2)</h4>
+                            <ul>
+                                <li>Communication de base</li>
+                                <li>Compréhension écrite</li>
+                                <li>Vocabulaire courant</li>
+                                <li>Culture italienne</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2 data-i18n="skills.title">Mes Compétences techniques</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-i18n="skills.programming.title">Langages de Programmation</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>C</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-i18n="skills.web.title">Web Development</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>HTML/CSS</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PHP</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Langues</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>Français (Langue maternelle)</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Anglais (Niveau B2)</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Italien (Niveau A2)</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 data-i18n="skills.tools.title">Outils et Technologies</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>Git</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Linux/Unix</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Assistance Informatique</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Réseaux d'informations</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projets.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <style>
+        :root {
+            --primary-color-rgb: 0, 119, 204; /* Valeur RGB de la couleur primaire pour les effets de transparence */
+        }
+    </style>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="projects">
+            <h2 data-i18n="projects.title">Projets Académiques</h2>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="projectSearch" data-i18n-placeholder="projects.searchPlaceholder" placeholder="Rechercher un projet...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Technologies:</label>
+                        <div class="tech-filters" id="techFilters">
+                            <button class="filter-btn" data-tech="HTML">HTML</button>
+                            <button class="filter-btn" data-tech="CSS">CSS</button>
+                            <button class="filter-btn" data-tech="JavaScript">JavaScript</button>
+                            <button class="filter-btn" data-tech="PHP">PHP</button>
+                            <button class="filter-btn" data-tech="C">C</button>
+                            <button class="filter-btn" data-tech="MySQL">MySQL</button>
+                            <button class="filter-btn" data-tech="Shell">Shell</button>
+                            <button class="filter-btn" data-tech="Unix/Linux">Unix/Linux</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Année:</label>
+                        <select id="yearFilter">
+                            <option value="">Toutes les années</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <h2 data-i18n="projects.personalTitle" style="margin-top: 40px;">Projets Personnels</h2>
+            <p class="section-intro" data-i18n="projects.personalIntro">Projets réalisés pendant mon temps libre pour approfondir mes connaissances et développer de nouvelles compétences.</p>
+
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" onclick="window.location.href='projet-gaming-services.html'">
+                    <h3>Site Web Services Gaming</h3>
+                    <div class="project-date">2024</div>
+                    <p data-i18n="projects.gaming.desc">Développement en freelance d'une plateforme complète de services gaming incluant coaching, tournois et ressources d'amélioration.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Projet freelance complet</li>
+                            <li>Interface responsive moderne</li>
+                            <li>Système de réservation intégré</li>
+                        </ul>
+                        <a href="projet-gaming-services.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-jeu-taupe.html'">
+                    <h3>Jeu de Taupe en Python</h3>
+                    <div class="project-date">2024</div>
+                    <p data-i18n="projects.whackamole.desc">Développement d'un jeu de taupe interactif en Python dans le cadre du cours de NSI, mettant en pratique les concepts de programmation orientée objet et de développement de jeux vidéo.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Pygame</span>
+                        <span>POO</span>
+                        <span>Interface Graphique</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Interface graphique interactive</li>
+                            <li>Système de score et niveaux</li>
+                            <li>Animations et effets sonores</li>
+                            <li>Projet NSI</li>
+                        </ul>
+                        <a href="projet-jeu-taupe.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-click-journey.html'">
+                    <h3>Click-Journey</h3>
+                    <div class="project-date">Jan-Mai 2025</div>
+                    <p data-i18n="projects.clickJourney.desc">Développement d'un site web d'agence de voyages avec structure technique de gestion.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Travail en équipe de trois</li>
+                        </ul>
+                        <a href="projet-click-journey.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-c-wire.html'">
+                    <h3>C-Wire</h3>
+                    <div class="project-date">Nov. - Déc. 2024</div>
+                    <p data-i18n="projects.cWire.desc">Développement d'un programme de synthèse de données pour un système de distribution d'électricité en France.</p>
+                    <div class="tech-stack">
+                        <span>C</span>
+                        <span>Shell</span>
+                        <span>Unix/Linux</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Automatisation des processus de traitement de données</li>
+                            <li>Scripts Shell sous environnement Unix/Linux</li>
+                            <li>Travail en équipe de trois</li>
+                        </ul>
+                        <a href="projet-c-wire.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-cy-fest.html'">
+                    <h3>CY Fest</h3>
+                    <div class="project-date">Oct. 2023 - Juin 2024</div>
+                    <p data-i18n="projects.cyFest.desc">Développement d'un système de gestion de scènes et de réservations pour un festival.</p>
+                    <div class="tech-stack">
+                        <span>C</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Mode manager et mode client</li>
+                            <li>Travail en équipe de trois</li>
+                        </ul>
+                        <a href="projet-cy-fest.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-isolation.html'">
+                    <h3 data-i18n="projects.isolation.title">Projet Isolation énergétique</h3>
+                    <div class="project-date">2022-2023</div>
+                    <p data-i18n="projects.isolation.desc">Solution d'amélioration de l'isolation de l'école selon la méthode SMART.</p>
+                    <div class="project-details">
+                        <ul>
+                            <li>Réalisé dans l'agglomération de Cergy-Pontoise</li>
+                            <li>Travail en équipe de six</li>
+                        </ul>
+                        <a href="projet-isolation.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-logo-camille-see.html'">
+                    <h3>Concours de logo - Cité scolaire Camille Sée</h3>
+                    <div class="project-date">2017</div>
+                    <p>Création et lauréat d'un logo pour le collège et le lycée dans le cadre d'un concours en respectant une charte visuelle imposée.</p>
+                    <div class="tech-stack">
+                        <span>Design</span>
+                        <span>Charte graphique</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Logo officiellement utilisé par l'établissement</li>
+                            <li>Premier prix du concours</li>
+                        </ul>
+                        <a href="projet-logo-camille-see.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-theatre-conservatoire.html'">
+                    <h3>Théâtre au Conservatoire du 15ème</h3>
+                    <div class="project-date">2016-2019</div>
+                    <p>Participation à plusieurs pièces de théâtre au Conservatoire du 15ème arrondissement, développant des compétences en communication et travail d'équipe.</p>
+                    <div class="tech-stack">
+                        <span>Expression Orale</span>
+                        <span>Travail d'Équipe</span>
+                        <span>Gestion du Stress</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Interprétation de différents rôles</li>
+                            <li>Représentations publiques</li>
+                            <li>Travail collaboratif</li>
+                        </ul>
+                        <a href="projet-theatre-conservatoire.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-debat-lycee.html'">
+                    <h3>Club de Débat et Éloquence</h3>
+                    <div class="project-date">2017-2020</div>
+                    <p>Participation active au club de débat du lycée Victor Duruy, développant des compétences en argumentation, pensée critique et leadership.</p>
+                    <div class="tech-stack">
+                        <span>Argumentation</span>
+                        <span>Pensée Critique</span>
+                        <span>Leadership</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Finaliste au concours d'éloquence inter-lycées</li>
+                            <li>Organisation d'événements</li>
+                            <li>Mentorat auprès des nouveaux membres</li>
+                        </ul>
+                        <a href="projet-debat-lycee.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-rdv.html'">
+                    <h3>Système de Rendez-vous</h3>
+                    <div class="project-date">Avril 2025</div>
+                    <p>Application web permettant de planifier des rendez-vous en ligne avec un système de calendrier interactif et une gestion des créneaux horaires.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Calendrier interactif</li>
+                            <li>Sélection de créneaux horaires</li>
+                            <li>Validation des rendez-vous</li>
+                            <li>Interface responsive</li>
+                        </ul>
+                        <a href="projet-rdv.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-robot.html'">
+                    <h3 data-i18n="projects.robot.title">Combat de Robots</h3>
+                    <div class="project-date">2024</div>
+                    <p data-i18n="projects.robot.desc">Construction d'un robot et participation à un combat officiel. Projet alliant programmation, automatisation et gestion d'équipe.</p>
+                    <div class="tech-stack">
+                        <span>Robotique</span>
+                        <span>Automatisation</span>
+                        <span>Gestion de projet</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Construction complète du robot</li>
+                            <li>Programmation des automatismes</li>
+                            <li>Coordination d'équipe</li>
+                            <li>Participation à une compétition officielle</li>
+                        </ul>
+                        <a href="projet-robot.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-quizmaster.html'">
+                    <h3>QuizMaster</h3>
+                    <div class="project-date">Mars 2025</div>
+                    <p data-i18n="projects.quizmaster.description">Application web interactive de quiz avec système d'administration complet. Propose des quiz dans différentes catégories avec suivi des scores et classement des joueurs.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li data-i18n="projects.quizmaster.features.point1">Interface responsive et moderne</li>
+                            <li data-i18n="projects.quizmaster.features.point2">Système de quiz interactif avec timer</li>
+                            <li data-i18n="projects.quizmaster.features.point3">Espace administrateur sécurisé</li>
+                            <li data-i18n="projects.quizmaster.features.point4">Classement et suivi des scores</li>
+                        </ul>
+                        <a href="projet-quizmaster.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-sidsic.html'">
+                    <h3>Gestion des Services SIDSIC</h3>
+                    <div class="project-date">2023-2024</div>
+                    <p>Amélioration et gestion des services informatiques au SIDSIC (Service Interministériel Départemental des Systèmes d'Information et de Communication)</p>
+                    <div class="tech-stack">
+                        <span>Windows Server</span>
+                        <span>Active Directory</span>
+                        <span>PowerShell</span>
+                        <span>Support IT</span>
+                        <span>Business Analysis</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Analyse des besoins utilisateurs</li>
+                            <li>Transformation en solutions techniques</li>
+                            <li>Optimisation des services informatiques</li>
+                            <li>Support technique niveau 1-2</li>
+                            <li>Administration système</li>
+                            <li>Documentation technique</li>
+                        </ul>
+                        <a href="projet-sidsic.html" class="view-details">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-reseau-monitoring.html'">
+                    <h3>Système de Monitoring Réseau</h3>
+                    <div class="project-date">2024</div>
+                    <p>Développement d'un système de surveillance réseau avancé utilisant des machines virtualisées et des serveurs distants pour monitorer mon infrastructure.</p>
+                    <div class="tech-stack">
+                        <span>OpenVPN</span>
+                        <span>Docker</span>
+                        <span>ProtonVPN</span>
+                        <span>AnyDesk</span>
+                        <span>Virtualisation</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Déploiement d'OpenVPN via Docker</li>
+                            <li>Machines virtuelles pour tests et monitoring</li>
+                            <li>Accès distant sécurisé avec AnyDesk</li>
+                            <li>Protection des connexions avec ProtonVPN</li>
+                        </ul>
+                        <a href="projet-reseau-monitoring.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-reseau-vpn.html'">
+                    <h3>Configuration VPN Personnel</h3>
+                    <div class="project-date">2023</div>
+                    <p>Mise en place d'une solution VPN personnelle pour sécuriser mes connexions sur les réseaux publics et accéder à mon réseau domestique à distance.</p>
+                    <div class="tech-stack">
+                        <span>OpenVPN</span>
+                        <span>WireGuard</span>
+                        <span>Sécurité réseau</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Comparaison OpenVPN vs WireGuard</li>
+                            <li>Authentification par certificats</li>
+                            <li>Configuration multi-appareils</li>
+                        </ul>
+                        <a href="projet-reseau-vpn.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='projet-etude-psychologie-humaine-shs.html'">
+                    <h3>Étude Psychologie Humaine & SHS</h3>
+                    <div class="project-date">2023-2024</div>
+                    <p>Exploration et analyse des comportements humains et des dynamiques sociales dans le cadre des Sciences Humaines.</p>
+                    <div class="tech-stack">
+                        <span>Psychologie</span>
+                        <span>Sciences Sociales</span>
+                        <span>Recherche</span>
+                        <span>Analyse</span>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li>Méthodes de recherche qualitative et quantitative</li>
+                            <li>Analyse de données</li>
+                        </ul>
+                        <a href="projet-etude-psychologie-humaine-shs.html" class="view-details" data-i18n="projects.viewDetails">Voir les détails →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .search-container {
+            margin-bottom: 2rem;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        
+        .filters {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .filter-group label {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .tech-filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        select {
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+    </style>
+
+    <script>
+        const projectSearch = document.getElementById('projectSearch');
+        const yearFilter = document.getElementById('yearFilter');
+        const techFilters = document.getElementById('techFilters');
+        const projects = document.querySelectorAll('.project-card');
+        let activeTechFilters = new Set();
+
+        // Fonction pour filtrer les projets
+        function filterProjects() {
+            const searchText = projectSearch.value.toLowerCase();
+            const selectedYear = yearFilter.value;
+
+            projects.forEach(project => {
+                const title = project.querySelector('h3').textContent.toLowerCase();
+                const description = project.querySelector('p').textContent.toLowerCase();
+                const date = project.querySelector('.project-date').textContent;
+                const techStackElement = project.querySelector('.tech-stack');
+                const technologies = techStackElement ? 
+                    Array.from(techStackElement.querySelectorAll('span')).map(span => span.textContent) : 
+                    [];
+
+                // Vérifier la correspondance du texte
+                const matchesSearch = title.includes(searchText) || 
+                                    description.includes(searchText);
+
+                // Vérifier l'année
+                const matchesYear = !selectedYear || date.includes(selectedYear);
+
+                // Vérifier les technologies
+                const matchesTech = activeTechFilters.size === 0 || 
+                                  technologies.some(tech => activeTechFilters.has(tech));
+
+                // Afficher ou masquer le projet
+                const shouldShow = matchesSearch && matchesYear && matchesTech;
+                project.style.display = shouldShow ? 'block' : 'none';
+
+                if(shouldShow) {
+                    project.classList.add('fade-in');
+                } else {
+                    project.classList.remove('fade-in');
+                }
+            });
+        }
+
+        // Écouteurs d'événements
+        projectSearch.addEventListener('input', filterProjects);
+        yearFilter.addEventListener('change', filterProjects);
+
+        // Gestionnaire de filtres technologiques
+        techFilters.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                const tech = e.target.dataset.tech;
+                if (e.target.classList.contains('active')) {
+                    e.target.classList.remove('active');
+                    activeTechFilters.delete(tech);
+                } else {
+                    e.target.classList.add('active');
+                    activeTechFilters.add(tech);
+                }
+                filterProjects();
+            }
+        });
+    </script>
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
+    <script src="projets-animations.js"></script>
+    <script>
+        // Script pour animer les éléments de la page des projets
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fonction pour animer les éléments avec un délai
+            const animateWithDelay = (selector, delay = 0) => {
+                setTimeout(() => {
+                    document.querySelectorAll(selector).forEach(element => {
+                        element.classList.add('animated');
+                    });
+                }, delay);
+            };
+
+            // Animation des titres
+            animateWithDelay('.projects h2', 300);
+            
+            // Animation de l'intro
+            animateWithDelay('.section-intro', 500);
+            
+            // Animation de la barre de recherche
+            animateWithDelay('.search-box', 700);
+            
+            // Animation des filtres
+            animateWithDelay('.filters', 800);
+            
+            // Animation des cartes de projets
+            animateWithDelay('.project-card', 900);
+            
+            // Ajouter des effets aux boutons de filtre
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

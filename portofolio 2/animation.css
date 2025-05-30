@@ -1,0 +1,133 @@
+/* Styles pour l'animation d'introduction inspirée du site Astroshock */
+
+/* Style initial pour s'assurer que le contenu est toujours visible */
+body {
+    visibility: visible !important;
+}
+
+/* Overlay d'animation qui couvre tout l'écran */
+.intro-animation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color, #ffffff);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.8s ease-out;
+}
+
+/* Effet de fondu pour faire disparaître l'overlay */
+.intro-animation-overlay.fade-out {
+    opacity: 0;
+}
+
+/* Conteneur pour le texte d'animation */
+.intro-text-container {
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Animation de sortie pour le conteneur de texte */
+.intro-text-container.animate-out {
+    transform: translateY(-50px);
+}
+
+/* Style pour le texte principal */
+.intro-main-text {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color, #0077cc);
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Style pour le sous-texte */
+.intro-sub-text {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--text-color, #333333);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Animation d'entrée pour les textes */
+.intro-main-text.animate-in,
+.intro-sub-text.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Améliorations pour les animations existantes */
+.animate-fade-in,
+.animate-slide-up,
+.animate-slide-up-delay,
+.animate-fade-in-delay,
+.animate-fade-in-up,
+.animate-cards {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Styles initiaux pour les éléments animés */
+.animate-slide-up,
+.animate-slide-up-delay {
+    transform: translateY(20px);
+}
+
+.animate-fade-in-up {
+    transform: translateY(20px);
+}
+
+.animate-fade-in.animated {
+    opacity: 1;
+}
+
+.animate-slide-up.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-slide-up-delay.animated {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.animate-fade-in-delay.animated {
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.animate-fade-in-up.animated {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.animate-cards.animated {
+    opacity: 1;
+    transition-delay: 0.8s;
+}
+
+/* Animation pour les éléments de la page d'accueil */
+.hero h1, .hero h2 {
+    transform: translateY(20px);
+}
+
+.hero-content {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.hero-content.animated {
+    opacity: 1;
+}

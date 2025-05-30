@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CY Fest - Projet Détail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="project-detail">
+            <div class="project-header">
+                <h2 data-i18n="projects.cyFest.title">CY Fest</h2>
+                <div class="project-date">Oct. 2023 - Juin 2024</div>
+                <div class="tech-stack">
+                    <span>C</span>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <section class="project-process">
+                    <h3 data-i18n="projectDetail.processTitle">Processus de Développement</h3>
+                    <p>
+                        Le projet CY Fest a été développé en C, en équipe, avec pour objectif de créer un système de gestion de festival fonctionnel.
+                        Nous avons abordé ce projet en définissant clairement les rôles (manager et client) et les interactions entre eux.
+                        La planification a inclus la modélisation des données (scènes, spectacles, réservations) et la conception de l'architecture du programme.
+                        Le développement en C a nécessité une gestion rigoureuse de la mémoire et l'implémentation d'algorithmes pour la gestion des réservations et la planification des spectacles.
+                        La collaboration a été facilitée par l'utilisation d'un système de versioning et des points réguliers pour partager notre avancement.
+                        Les principaux défis ont résidé dans la complexité de la logique de réservation et la gestion des contraintes de temps.
+                        Des tests unitaires et d'intégration ont été réalisés pour assurer la fiabilité du système.
+                    </p>
+                </section>
+
+                <section class="project-casestudy">
+                    <h3 data-i18n="projectDetail.caseStudyTitle">Étude de Cas : Gestion de Festival en Ligne</h3>
+                    <p>
+                        Le problème était de proposer une solution logicielle pour gérer les aspects clés d'un festival (programmation des scènes, réservation des places).
+                        La solution technique a été de développer une application en ligne de commande en C, offrant des interfaces dédiées aux managers (pour la configuration du festival) et aux clients (pour la consultation et la réservation).
+                        L'accent a été mis sur l'efficacité et la robustesse du système.
+                        Le principal résultat est un programme capable de gérer un festival de manière autonome, de la configuration à la gestion des réservations en temps réel.
+                        Ce projet a renforcé mes compétences en programmation structurée en C et en conception de systèmes logiciels complexes, tout en améliorant ma capacité à travailler sur un projet technique en équipe.
+                    </p>
+                </section>
+
+                <h3 data-i18n="projects.cyFest.description.title">Description du projet</h3>
+                <p data-i18n="projects.cyFest.description.content">
+                    Développement d'un système complet de gestion de scènes et de réservations pour un festival, incluant des interfaces manager et client.
+                </p>
+
+                <h3 data-i18n="projects.cyFest.features.title">Fonctionnalités principales</h3>
+                <ul>
+                    <li data-i18n="projects.cyFest.features.point1">Mode manager et mode client</li>
+                    <li data-i18n="projects.cyFest.features.point2">Implémentation du système de réservation</li>
+                    <li data-i18n="projects.cyFest.features.point3">Gestion des données en C</li>
+                    <li data-i18n="projects.cyFest.features.point4">Travail en équipe de trois</li>
+                </ul>
+            </div>
+
+            <a href="projets.html" class="cta-button secondary" data-i18n="projects.backToProjects">← Retour aux projets</a>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html>

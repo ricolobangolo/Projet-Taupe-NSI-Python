@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diplômes - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="diplomes">
+            <h2><i class="fas fa-graduation-cap"></i> <span data-i18n="diplomas.title">Mes Diplômes et Formations</span></h2>
+            
+            <div class="diplomes-timeline">
+                <div class="diplome-card current">
+                    <div class="diplome-header">
+                        <div class="diplome-title">
+                            <h3>Diplôme d'ingénieur</h3>
+                            <span class="date">2025 - 2028 (en cours)</span>
+                        </div>
+                        <div class="etablissement">
+                            <i class="fas fa-university"></i>
+                            <span>CY Tech</span>
+                        </div>
+                    </div>
+                    <div class="diplome-content">
+                        <p>Cycle Ingénieur en informatique.</p>
+                         <ul class="details-list">
+                            <li>Spécialisation en informatique</li>
+                            <li>Projets de grande envergure</li>
+                            <li>Stages en entreprise</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="diplome-card">
+                    <div class="diplome-header">
+                        <div class="diplome-title">
+                            <h3>Pré-ingénieur 2 Bac+2</h3>
+                            <span class="date">2023 - 2025</span>
+                        </div>
+                        <div class="etablissement">
+                            <i class="fas fa-university"></i>
+                            <span>CY Tech Cergy Pontoise</span>
+                        </div>
+                    </div>
+                    <div class="diplome-content">
+                        <p>Deuxième année du cycle préparatoire intégré en Grande École d'Ingénieurs.</p>
+                        <ul class="details-list">
+                            <li>Approfondissement des matières scientifiques et techniques</li>
+                            <li>Introduction aux projets d'ingénierie</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="diplome-card">
+                    <div class="diplome-header">
+                        <div class="diplome-title">
+                            <h3 data-i18n="diplomas.bac.title">Baccalauréat général</h3>
+                            <span class="date">2023</span>
+                        </div>
+                        <div class="etablissement">
+                            <i class="fas fa-school"></i>
+                            <span data-i18n="diplomas.bac.school">Lycée Victor DURUY Paris 7</span>
+                        </div>
+                    </div>
+                    <div class="diplome-content">
+                        <p data-i18n="diplomas.bac.description">Obtention du Baccalauréat général avec les spécialités Mathématiques, Physique-Chimie et Numérique Sciences Informatiques (NSI).</p>
+                        <div class="mention" data-i18n="diplomas.bac.honors">Mention Bien</div>
+                    </div>
+                </div>
+
+                <div class="diplome-card">
+                    <div class="diplome-header">
+                        <div class="diplome-title">
+                            <h3 data-i18n="diplomas.brevet.title">Brevet des collèges</h3>
+                            <span class="date">2020</span>
+                        </div>
+                        <div class="etablissement">
+                            <i class="fas fa-school"></i>
+                            <span data-i18n="diplomas.brevet.school">Collège Camille SEE Paris 15</span>
+                        </div>
+                    </div>
+                    <div class="diplome-content">
+                        <p>Obtention du Brevet des collèges.</p>
+                        <div class="mention" data-i18n="diplomas.brevet.honors">Mention Très Bien</div>
+                    </div>
+                </div>
+
+                <div class="diplome-card">
+                    <div class="diplome-header">
+                        <div class="diplome-title">
+                            <h3>Attestation Scolaire de Sécurité Routière</h3>
+                            <span class="date">2020</span>
+                        </div>
+                    </div>
+                    <div class="diplome-content">
+                        <p>ASSR et ASSR2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .diplomes {
+            padding: 2rem 0;
+        }
+
+        .diplomes-timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .diplome-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .diplome-card:hover {
+            transform: translateX(10px);
+        }
+
+        .diplome-card.current {
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .diplome-header {
+            margin-bottom: 1rem;
+        }
+
+        .diplome-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .diplome-title h3 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+            background: #f8f9fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+        }
+
+        .etablissement {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #546e7a;
+            font-size: 1.1rem;
+        }
+
+        .diplome-content {
+            color: #37474f;
+            line-height: 1.6;
+        }
+
+        .mention {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #28a745;
+            margin-top: 0.5rem;
+        }
+
+        .badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .diplome-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

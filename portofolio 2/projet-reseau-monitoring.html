@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Monitoring Réseau - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="project-detail">
+            <div class="project-header">
+                <h2>Système de Monitoring Réseau</h2>
+                <div class="project-date">2024</div>
+                <div class="tech-stack">
+                    <span>Grafana</span>
+                    <span>Prometheus</span>
+                    <span>SNMP</span>
+                    <span>Linux</span>
+                    <span>Docker</span>
+                </div>
+            </div>
+
+            <div class="project-description">
+
+                <section class="project-process">
+                    <h3 data-i18n="projectDetail.processTitle">Processus de Mise en Place du Monitoring</h3>
+                    <p>
+                        La mise en place du système de monitoring réseau a suivi plusieurs étapes clés.
+                        Tout d'abord, j'ai évalué les besoins spécifiques en matière de surveillance (types de données à collecter, seuils d'alerte, visualisation).
+                        Ensuite, j'ai choisi et configuré les outils de monitoring (par exemple, Prometheus pour la collecte de métriques, Grafana pour la visualisation, Alertmanager pour les notifications).
+                        L'installation et la configuration des agents sur les machines à surveiller ont constitué une phase importante.
+                        Des tableaux de bord personnalisés ont été créés dans Grafana pour visualiser l'état du réseau et les performances des services en temps réel.
+                        Enfin, des règles d'alerte ont été définies pour être notifié en cas de problème.
+                        Des ajustements réguliers ont été nécessaires pour affiner les seuils d'alerte et optimiser la collecte des données.
+                    </p>
+                </section>
+
+                <section class="project-casestudy">
+                    <h3 data-i18n="projectDetail.caseStudyTitle">Étude de Cas : Surveillance Active d'une Infrastructure Réseau</h3>
+                    <p>
+                        Le problème était le manque de visibilité en temps réel sur l'état et les performances de l'infrastructure réseau.
+                        La solution a été de déployer un système de monitoring centralisé capable de collecter, stocker, visualiser et alerter sur les métriques critiques du réseau et des services.
+                        L'objectif était de détecter proactivement les problèmes et d'optimiser les performances.
+                        Le principal résultat est un tableau de bord complet offrant une vue d'ensemble de l'infrastructure et un système d'alerte efficace.
+                        Ce projet a renforcé mes compétences en administration système, en gestion de bases de données Time Series, en visualisation de données et en mise en place de solutions de surveillance.
+                    </p>
+                </section>
+
+                <h3 data-i18n="projects.reseauMonitoring.description.title">Description du projet</h3>
+                <p>
+                    Développement d'un système de surveillance réseau personnel pour monitorer les performances et la disponibilité
+                    de mon infrastructure domestique. Ce projet amateur m'a permis d'approfondir mes connaissances en matière de
+                    monitoring réseau et d'acquérir une expérience pratique avec des outils professionnels.
+                </p>
+
+                <h3>Objectifs du projet</h3>
+                <ul>
+                    <li>Surveiller en temps réel les performances de mon réseau domestique</li>
+                    <li>Recevoir des alertes en cas de problèmes ou d'anomalies</li>
+                    <li>Collecter des métriques pour analyser les tendances d'utilisation</li>
+                    <li>Visualiser les données réseau de manière intuitive</li>
+                </ul>
+
+                <h3>Réalisations techniques</h3>
+                <ul>
+                    <li>Déploiement de Prometheus pour la collecte de métriques réseau</li>
+                    <li>Configuration de Grafana pour la création de tableaux de bord personnalisés</li>
+                    <li>Mise en place d'agents SNMP sur les différents équipements du réseau</li>
+                    <li>Configuration d'alertes par email et notifications push</li>
+                    <li>Utilisation de Docker pour conteneuriser les différents services</li>
+                    <li>Développement de scripts personnalisés pour collecter des métriques spécifiques</li>
+                </ul>
+
+                <h3>Compétences développées</h3>
+                <ul>
+                    <li>Monitoring et analyse de performances réseau</li>
+                    <li>Configuration et utilisation d'outils de surveillance</li>
+                    <li>Conteneurisation avec Docker</li>
+                    <li>Scripting pour l'automatisation</li>
+                    <li>Analyse de données et visualisation</li>
+                    <li>Gestion d'alertes et notifications</li>
+                </ul>
+
+                <h3>Résultats et bénéfices</h3>
+                <p>
+                    Ce projet m'a permis d'identifier et de résoudre proactivement plusieurs problèmes réseau avant qu'ils n'affectent
+                    les utilisateurs. J'ai pu optimiser les performances de mon infrastructure en identifiant les goulots d'étranglement
+                    et en ajustant les configurations en conséquence. Les compétences acquises sont directement transférables dans un
+                    environnement professionnel de gestion réseau.
+                </p>
+            </div>
+
+            <a href="projets.html" class="cta-button secondary">← Retour aux projets</a>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

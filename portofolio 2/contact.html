@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="contact">
+            <h2 data-i18n="contact.title">Me Contacter</h2>
+            
+            <div class="contact-info-cards">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4 data-i18n="contact.info.email">Email</h4>
+                    <p>ademhrt354@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h4 data-i18n="contact.info.phone">Téléphone</h4>
+                    <p>07 67 87 23 78</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn</h4>
+                    <p><a href="https://www.linkedin.com/in/adem-houidi-448579354/" target="_blank" data-i18n="contact.info.linkedin">Mon profil LinkedIn</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h4>GitHub</h4>
+                    <p><a href="https://github.com/ricolobangolo" target="_blank">ricolobangolo</a></p>
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+                <div class="form-header">
+                    <h3 data-i18n="contact.form.title">Envoyez-moi un message</h3>
+                    <p data-i18n="contact.form.subtitle">Je vous répondrai dans les plus brefs délais. Utiliser le formulaire met beaucoup plus de temps que mes autres moyens de communication.</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">Nom complet</label>
+                            <input type="text" id="name" required placeholder="Votre nom" data-i18n-placeholder="contact.form.namePlaceholder">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">Email</label>
+                            <input type="email" id="email" required placeholder="votre@email.com" data-i18n-placeholder="contact.form.emailPlaceholder">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-i18n="contact.form.subject">Sujet</label>
+                        <input type="text" id="subject" required placeholder="Sujet de votre message" data-i18n-placeholder="contact.form.subjectPlaceholder">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="contact.form.message">Message</label>
+                        <textarea id="message" required placeholder="Votre message..." data-i18n-placeholder="contact.form.messagePlaceholder"></textarea>
+                    </div>
+                    <button type="submit" class="btn">
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.submit">Envoyer</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

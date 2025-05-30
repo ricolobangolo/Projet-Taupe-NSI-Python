@@ -1,0 +1,296 @@
+/* Styles et animations spécifiques pour la page des projets */
+
+/* Fond d'ambiance pour la page des projets */
+.projects {
+    position: relative;
+    overflow: hidden;
+}
+
+.projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 30%, rgba(var(--primary-color-rgb, 0, 119, 204), 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(var(--primary-color-rgb, 0, 119, 204), 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Animation d'entrée pour les cartes de projets */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), 
+                opacity 0.6s ease,
+                box-shadow 0.4s ease,
+                transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animation séquentielle des cartes */
+.projects-grid .project-card:nth-child(1) { transition-delay: 0.1s; }
+.projects-grid .project-card:nth-child(2) { transition-delay: 0.2s; }
+.projects-grid .project-card:nth-child(3) { transition-delay: 0.3s; }
+.projects-grid .project-card:nth-child(4) { transition-delay: 0.4s; }
+.projects-grid .project-card:nth-child(5) { transition-delay: 0.5s; }
+.projects-grid .project-card:nth-child(6) { transition-delay: 0.6s; }
+.projects-grid .project-card:nth-child(7) { transition-delay: 0.7s; }
+.projects-grid .project-card:nth-child(8) { transition-delay: 0.8s; }
+
+/* Classe pour activer l'animation */
+.project-card.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Effet de survol amélioré */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Style pour la date du projet */
+.project-date {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-date {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Effet de brillance au survol */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+    transform: rotate(30deg) translate(10%, 10%);
+}
+
+/* Animation des badges de technologie */
+.tech-stack span {
+    transform: scale(0.9);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.tech-stack span:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tech-stack span.badge-animated {
+    animation: badgePulse 1.5s infinite alternate;
+}
+
+@keyframes badgePulse {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+        background: var(--primary-color);
+        color: white;
+    }
+}
+
+/* Animation des filtres */
+.filters {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s ease;
+}
+
+.filters.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.filter-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    margin: 0 5px 5px 0;
+    padding: 8px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    cursor: pointer;
+    font-weight: 500;
+    transform: translateZ(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.filter-btn:hover::after {
+    width: 100%;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Animation du titre de section */
+.projects h2 {
+    position: relative;
+    display: inline-block;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.8s ease;
+}
+
+.projects h2.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.projects h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: width 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.projects h2.animated::after {
+    width: 100%;
+}
+
+/* Animation de la barre de recherche */
+.search-box {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), 
+                opacity 0.6s ease,
+                box-shadow 0.3s ease;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.search-box.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.search-box:focus-within {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-box.search-focused {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+.search-box input {
+    transition: all 0.3s ease;
+}
+
+.search-box:focus-within input {
+    padding-left: 20px;
+}
+
+/* Animation du texte d'introduction */
+.section-intro {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s ease;
+}
+
+.section-intro.animated {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animation des détails du projet */
+.project-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    padding: 0;
+}
+
+.project-card:hover .project-details {
+    max-height: 200px;
+    opacity: 1;
+    padding-top: 15px;
+}
+
+/* Animation du bouton "Voir les détails" */
+.view-details {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.view-details::after {
+    content: '→';
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.view-details:hover {
+    transform: translateX(-5px);
+}
+
+.view-details:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content animate-fade-in">
+            <h1 class="animate-slide-up">Adem HOUIDI</h1>
+            <h2 class="animate-slide-up-delay" data-i18n="hero.title">Étudiant en Ingénierie</h2>
+            <div class="status-banner hero-status animate-fade-in-delay">
+                <h3><i class="fas fa-star"></i> <span data-i18n="hero.status">POINTS CLÉS</span></h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-graduation-cap pulse"></i> <span data-i18n="hero.student">Étudiant en Pré-Ing2 à CY-TECH</span></li>
+                    <li><i class="fas fa-search bounce"></i> <span data-i18n="hero.looking">Recherche d'alternance dans tous types de domaines des mathématiques appliqués à l'informatique</span></li>
+                    <li><i class="fas fa-calendar-alt shake"></i> <span data-i18n="hero.duration">Durée : 1 à 3 ans</span></li>
+                    <li><i class="fas fa-clock rotate"></i> <span data-i18n="hero.rhythm">Rythme : 2 semaines entreprise / 2 semaines école</span></li>
+                </ul>
+            </div>
+            <div class="hero-buttons animate-fade-in-up">
+                <a href="contact.html" class="cta-button primary glow-effect" data-i18n="hero.contact">
+                    <i class="fas fa-paper-plane"></i> Me contacter
+                </a>
+                <a href="about.html" class="cta-button secondary pulse-effect" data-i18n="hero.learnMore">
+                    <i class="fas fa-info-circle"></i> En savoir plus
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="home-content">
+        <section class="quick-intro">
+            <div class="container">
+                <h2 class="section-title animate-slide-up" data-i18n="home.welcome">
+                    <i class="fas fa-code"></i> Bienvenue sur mon portfolio
+                </h2>
+                <div class="intro-grid animate-cards">
+                    <div class="intro-card hover-effect">
+                        <i class="fas fa-graduation-cap floating"></i>
+                        <h3 data-i18n="home.education">Formation</h3>
+                        <p data-i18n="home.educationDesc">Étudiant en école d'ingénieurs informatique à CY-TECH avec une spécialisation en physique.</p>
+                    </div>
+                    <div class="intro-card hover-effect">
+                        <i class="fas fa-laptop-code floating"></i>
+                        <h3 data-i18n="home.development">Passions</h3>
+                        <p data-i18n="home.developmentDesc">Passionné par de nombreux domaines: développement web, analyse de données, mathématiques, informatique, commerce, psychologie.</p>
+                    </div>
+                    <div class="intro-card hover-effect">
+                        <i class="fas fa-search floating"></i>
+                        <h3 data-i18n="home.objective">Objectif</h3>
+                        <p data-i18n="home.objectiveDesc">À la recherche d'une alternance pour mettre en pratique mes compétences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects">
+            <div class="container">
+                <h2 data-i18n="home.recentProjects">Projets récents</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Click-Journey</h3>
+                        <p data-i18n="projects.clickJourney.desc">Site web d'agence de voyages avec gestion technique</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>C-Wire</h3>
+                        <p data-i18n="projects.cWire.desc">Programme de synthèse de données pour distribution d'électricité</p>
+                        <div class="tech-stack">
+                            <span>C</span>
+                            <span>Shell</span>
+                            <span>Unix/Linux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-cta">
+                    <a href="projets.html" class="cta-button secondary" data-i18n="home.viewAllProjects">Voir tous les projets</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="argument-grid">
+            <div class="argument-card featured">
+                <h3>Expertise Technique Avancée</h3>
+                <p>Une maîtrise approfondie des technologies web modernes et des frameworks populaires.</p>
+                <ul>
+                    <li>Développement Full-Stack avec React, Node.js et Python</li>
+                    <li>Architecture Cloud et DevOps (AWS, Docker, CI/CD)</li>
+                    <li>Optimisation des performances et SEO</li>
+                    <li>Conception d'APIs RESTful et GraphQL</li>
+                </ul>
+            </div>
+
+            <div class="argument-card">
+                <h3>Expérience Agile</h3>
+                <p>Une approche méthodique et flexible du développement de projets.</p>
+                <ul>
+                    <li>Gestion de projets avec Scrum et Kanban</li>
+                    <li>Collaboration efficace avec les équipes cross-fonctionnelles</li>
+                    <li>Livraison continue et itérative</li>
+                    <li>Adaptation rapide aux changements</li>
+                </ul>
+            </div>
+
+            <div class="argument-card">
+                <h3>Design UX/UI</h3>
+                <p>Une attention particulière à l'expérience utilisateur et à l'interface.</p>
+                <ul>
+                    <li>Conception centrée utilisateur</li>
+                    <li>Design responsive et accessible</li>
+                    <li>Prototypage et tests utilisateurs</li>
+                    <li>Intégration des meilleures pratiques UI/UX</li>
+                </ul>
+            </div>
+
+            <div class="argument-card">
+                <h3>Innovation & Créativité</h3>
+                <p>Une approche créative pour résoudre les défis techniques.</p>
+                <ul>
+                    <li>Solutions innovantes et personnalisées</li>
+                    <li>Veille technologique constante</li>
+                    <li>Pensée critique et résolution de problèmes</li>
+                    <li>Adaptation aux nouvelles technologies</li>
+                </ul>
+            </div>
+
+            <div class="argument-card">
+                <h3>Communication & Collaboration</h3>
+                <p>Des compétences relationnelles essentielles pour le succès des projets.</p>
+                <ul>
+                    <li>Communication claire et efficace</li>
+                    <li>Travail d'équipe et mentorat</li>
+                    <li>Présentation technique et documentation</li>
+                    <li>Gestion des relations clients</li>
+                </ul>
+            </div>
+
+            <div class="argument-card featured">
+                <h3>Expertise en Sécurité</h3>
+                <p>Une approche proactive de la sécurité des applications web.</p>
+                <ul>
+                    <li>Implémentation des meilleures pratiques de sécurité</li>
+                    <li>Protection contre les vulnérabilités courantes</li>
+                    <li>Conformité RGPD et normes de sécurité</li>
+                    <li>Audits de sécurité et tests de pénétration</li>
+                </ul>
+            </div>
+
+            <div class="argument-card">
+                <h3>Performance & Optimisation</h3>
+                <p>Une expertise en optimisation des performances web.</p>
+                <ul>
+                    <li>Optimisation des temps de chargement</li>
+                    <li>Amélioration du Core Web Vitals</li>
+                    <li>Optimisation des bases de données</li>
+                    <li>Mise en cache et CDN</li>
+                </ul>
+            </div>
+
+            <div class="argument-card">
+                <h3>Maintenance & Support</h3>
+                <p>Un engagement envers la qualité et la durabilité des solutions.</p>
+                <ul>
+                    <li>Support technique réactif</li>
+                    <li>Maintenance préventive</li>
+                    <li>Mises à jour et évolutions</li>
+                    <li>Documentation technique détaillée</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
+    <script>
+        // Menu mobile
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const nav = document.querySelector('nav');
+
+        mobileMenuButton.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Fermer le menu au clic sur un lien
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Réseau Homelab - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="project-detail">
+            <div class="project-header">
+                <h2>Homelab Réseau Personnel</h2>
+                <div class="project-date">2023-2024</div>
+                <div class="tech-stack">
+                    <span>Routage</span>
+                    <span>VLAN</span>
+                    <span>Pare-feu</span>
+                    <span>Serveur NAS</span>
+                    <span>Raspberry Pi</span>
+                </div>
+            </div>
+
+            <div class="project-description">
+
+                <section class="project-process">
+                    <h3 data-i18n="projectDetail.processTitle">Processus de Mise en Place</h3>
+                    <p>
+                        La mise en place du réseau Homelab a été une démarche d'apprentissage pratique de l'administration système et réseau.
+                        Le processus a débuté par la planification de l'architecture réseau, incluant le choix du matériel (serveurs, routeurs, switchs) et la définition des rôles de chaque machine.
+                        L'installation et la configuration des systèmes d'exploitation (Linux, Windows Server) et des services réseau (DHCP, DNS, pare-feu) ont constitué une étape clé.
+                        Des défis ont été rencontrés lors de la configuration des interconnexions et de l'optimisation des performances.
+                        Des tests ont été effectués pour valider la connectivité et la fonctionnalité des services.
+                        L'itération a été constante pour ajouter de nouveaux services et améliorer la sécurité de l'environnement.
+                    </p>
+                </section>
+
+                <section class="project-casestudy">
+                    <h3 data-i18n="projectDetail.caseStudyTitle">Étude de Cas : Construction d'une Infrastructure Réseau Personnelle</h3>
+                    <p>
+                        Le problème était le désir d'acquérir une expérience concrète dans la gestion d'un réseau complexe et la configuration de divers services.
+                        La solution a été de construire un environnement Homelab personnel pour expérimenter avec différentes technologies réseau et systèmes d'exploitation dans un environnement contrôlé.
+                        L'objectif était de mettre en pratique les concepts théoriques et de résoudre des problèmes réels de configuration.
+                        Le principal résultat est une infrastructure réseau fonctionnelle qui sert de plateforme d'apprentissage et d'expérimentation continue.
+                        Ce projet a considérablement renforcé mes compétences en administration système et réseau, en résolution de problèmes et en autonomie technique.
+                    </p>
+                </section>
+
+                <h3 data-i18n="projects.reseauHomelab.description.title">Description du projet</h3>
+                <p>
+                    Conception et mise en place d'un réseau domestique avancé (homelab) pour améliorer mes compétences en réseaux
+                    et créer un environnement d'apprentissage pratique. Ce projet personnel m'a permis d'expérimenter avec
+                    différentes technologies réseau dans un cadre non-professionnel.
+                </p>
+
+                <h3>Objectifs du projet</h3>
+                <ul>
+                    <li>Créer un environnement réseau sécurisé et segmenté à la maison</li>
+                    <li>Mettre en pratique les connaissances théoriques en réseaux</li>
+                    <li>Expérimenter avec différentes configurations et services réseau</li>
+                    <li>Améliorer la sécurité de mon réseau domestique</li>
+                </ul>
+
+                <h3>Réalisations techniques</h3>
+                <ul>
+                    <li>Configuration d'un routeur avec OpenWRT pour un contrôle avancé du réseau</li>
+                    <li>Mise en place de VLANs pour segmenter le trafic (appareils IoT, invités, ordinateurs personnels)</li>
+                    <li>Installation et configuration d'un pare-feu avec règles personnalisées</li>
+                    <li>Déploiement d'un serveur NAS pour le stockage et le partage de fichiers</li>
+                    <li>Configuration d'un Raspberry Pi comme serveur Pi-hole pour le filtrage DNS et le blocage des publicités</li>
+                    <li>Mise en place d'un VPN pour accéder au réseau domestique à distance</li>
+                </ul>
+
+                <h3>Compétences développées</h3>
+                <ul>
+                    <li>Configuration de routeurs et commutateurs</li>
+                    <li>Segmentation réseau avec VLANs</li>
+                    <li>Gestion des règles de pare-feu</li>
+                    <li>Administration de serveurs Linux</li>
+                    <li>Dépannage réseau</li>
+                    <li>Documentation d'infrastructure</li>
+                </ul>
+
+                <h3>Résultats et bénéfices</h3>
+                <p>
+                    Ce projet m'a permis d'acquérir une expérience pratique précieuse en matière de réseaux informatiques, au-delà
+                    de la théorie apprise en cours. J'ai pu améliorer significativement la sécurité et les performances de mon réseau
+                    domestique tout en développant des compétences techniques qui sont directement applicables dans un contexte professionnel.
+                </p>
+            </div>
+
+            <a href="projets.html" class="cta-button secondary">← Retour aux projets</a>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

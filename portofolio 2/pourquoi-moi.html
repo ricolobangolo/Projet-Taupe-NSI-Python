@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pourquoi moi ? - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="why-me animate-fade-in">
+            <h2 data-i18n="whyme.title" class="animate-slide-up">Pourquoi me choisir ?</h2>
+            
+            <div class="argument-grid">
+                <div class="argument-card animate-fade-in-delay delay-1">
+                    <h3 data-i18n="whyme.passion.title">Passion & Créativité</h3>
+                    <p data-i18n="whyme.passion.description">Mon engagement envers l'informatique va au-delà des exigences académiques. Je suis constamment en train d'explorer de nouvelles technologies et de concrétiser des idées à travers des projets personnels stimulants, démontrant ainsi ma proactivité et ma soif d'apprendre.</p>
+                </div>
+
+                <div class="argument-card animate-fade-in-delay delay-2">
+                    <h3 data-i18n="whyme.skills.title">Polyvalence Technique</h3>
+                    <p data-i18n="whyme.skills.description">Ma formation combine une solide base en informatique avec une spécialisation en physique, me dotant d'une capacité unique à aborder et résoudre des problèmes complexes sous différents angles. Cette double compétence est un atout pour l'innovation.</p>
+                </div>
+
+                <div class="argument-card animate-fade-in-delay delay-3">
+                    <h3 data-i18n="whyme.adaptability.title">Adaptabilité & Résilience</h3>
+                    <p data-i18n="whyme.adaptability.description">Grâce à des expériences variées, notamment mon stage au Ministère de l'Intérieur, j'ai développé une grande capacité à m'intégrer rapidement dans de nouveaux environnements, à collaborer efficacement en équipe et à persévérer face aux défis.</p>
+                </div>
+
+                <div class="argument-card highlight-card animate-fade-in-delay delay-4">
+                    <h3 data-i18n="whyme.highlights.title">Mes Atouts Clés</h3>
+                    <ul>
+                        <li data-i18n="whyme.highlights.point1">**Expertise Technique :** Solide formation en informatique et en résolution de problèmes complexes.</li>
+                        <li data-i18n="whyme.highlights.point2">**Projets Concrets :** Portfolio riche démontrant une application pratique des compétences.</li>
+                        <li data-i18n="whyme.highlights.point3">**Esprit Collaboratif :** Aptitude avérée à travailler en équipe et à communiquer efficacement.</li>
+                        <li data-i18n="whyme.highlights.point4">**Apprentissage Continu :** Curiosité insatiable et engagement à rester à jour avec les évolutions technologiques.</li>
+                    </ul>
+                </div>
+
+                <div class="argument-card animate-fade-in-delay delay-5">
+                    <h3 data-i18n="whyme.problem_solving.title">Résolution de Problèmes</h3>
+                    <p data-i18n="whyme.problem_solving.description">J'aborde les défis avec une approche structurée et analytique, cherchant des solutions efficaces et innovantes. Mes expériences en projet m'ont permis de développer cette compétence essentielle.</p>
+                </div>
+
+                <div class="argument-card animate-fade-in-delay delay-6">
+                    <h3 data-i18n="whyme.communication.title">Communication & Pédagogie</h3>
+                    <p data-i18n="whyme.communication.description">Que ce soit pour expliquer des concepts techniques complexes ou pour travailler en équipe, je m'efforce d'avoir une communication claire et une approche pédagogique. Mes expériences de tutorat en témoignent.</p>
+                </div>
+
+                <div class="argument-card animate-fade-in-delay delay-7">
+                    <h3 data-i18n="whyme.project_management.title">Gestion de Projet</h3>
+                    <p data-i18n="whyme.project_management.description">J'ai eu l'opportunité de gérer et contribuer à divers projets, développant ainsi mes compétences en planification, organisation et respect des délais. Je suis capable de mener un projet de A à Z.</p>
+                </div>
+
+                <div class="argument-card animate-fade-in-delay delay-8">
+                    <h3 data-i18n="whyme.results_driven.title">Orienté Résultats</h3>
+                    <p data-i18n="whyme.results_driven.description">Mon objectif est de toujours produire des livrables de qualité et d'atteindre les objectifs fixés. Je suis motivé par la concrétisation des idées et la production de solutions fonctionnelles et efficaces.</p>
+                </div>
+            </div>
+
+            <div class="call-to-action animate-fade-in-delay delay-9">
+                <h3 data-i18n="whyme.cta.title">Envie de construire ensemble ?</h3>
+                <a href="contact.html" class="cta-button" data-i18n="whyme.cta.button">Contactez-moi</a>
+            </div>
+        </section>
+    </div>
+    <script src="translations.js"></script>
+    <script src="notifications.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

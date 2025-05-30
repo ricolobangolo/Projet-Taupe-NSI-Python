@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="experience.title">Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="experience.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h1 class="page-title" data-i18n="experience.title">Experience</h1>
+            
+            <div class="filter-controls">
+                <label for="sort-experiences" data-i18n="experience.sort.label">Trier par :</label>
+                <select id="sort-experiences" class="sort-select">
+                    <option value="newest" data-i18n="experience.sort.newest">Plus récent au plus ancien</option>
+                    <option value="oldest" data-i18n="experience.sort.oldest">Plus ancien au plus récent</option>
+                </select>
+            </div>
+            
+            <section class="experience-section">
+                <h2 data-i18n="experience.professional">Expériences professionnelles</h2>
+                
+
+                
+                <div class="experience-card">
+                    <h3 data-i18n="experience.math.tutor.title">Enseignant en soutien scolaire en mathématiques</h3>
+                    <p class="date" data-i18n="experience.math.tutor.date">2023 - Aujourd'hui</p>
+                    <p class="description" data-i18n="experience.math.tutor.desc">Soutien personnalisé pour les élèves en difficulté, développement de méthodes pédagogiques adaptées.</p>
+                    <ul>
+                        <li data-i18n="experience.math.tutor.point1">Préparation et animation de séances de soutien individuelles</li>
+                        <li data-i18n="experience.math.tutor.point2">Adaptation des méthodes pédagogiques selon le niveau</li>
+                        <li data-i18n="experience.math.tutor.point3">Suivi des progrès et communication avec les parents</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-card">
+                    <h3 data-i18n="experience.domotics.intern.title">Stagiaire en Domotique</h3>
+                    <p class="date" data-i18n="experience.domotics.intern.date">2021-2022</p>
+                    <p class="description" data-i18n="experience.domotics.intern.desc">Stage dans le domaine de la domotique et des systèmes automatisés pour l'habitat.</p>
+                    <ul>
+                        <li data-i18n="experience.domotics.intern.point1">Installation et configuration de systèmes domotiques</li>
+                        <li data-i18n="experience.domotics.intern.point2">Programmation d'automatismes pour l'habitat</li>
+                        <li data-i18n="experience.domotics.intern.point3">Support technique et service client</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-card">
+                    <h3 data-i18n="experience.it.intern.title">Stagiaire en informatique</h3>
+                    <p class="date" data-i18n="experience.it.intern.date">2019-2020</p>
+                    <p class="description" data-i18n="experience.it.intern.desc">Ministère de l'Intérieur / Préfecture de la Région Île-de-France Paris</p>
+                    <p data-i18n="experience.it.intern.details">Stage effectué au sein du service informatique de la PRIF au SIDSIC (Service Interministériel et Départemental des Systèmes d'Information et de Communication)</p>
+                    <ul>
+                        <li data-i18n="experience.it.intern.point1">Support technique aux utilisateurs et administration système</li>
+                        <li data-i18n="experience.it.intern.point2">Maintenance des systèmes informatiques et réseau</li>
+                        <li data-i18n="experience.it.intern.point3">Participation aux projets de développement et d'amélioration des services</li>
+                        <li data-i18n="experience.it.intern.point4">Gestion des systèmes Windows Server et Active Directory</li>
+                        <li data-i18n="experience.it.intern.point5">Analyse des besoins utilisateurs et transformation en solutions techniques</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="experience-section">
+                <h2 data-i18n="experience.volunteer">Bénévolat</h2>
+                
+                <div class="experience-card volunteer">
+                    <h3 data-i18n="experience.volunteer.croixrouge.title">Croix-Rouge Française</h3>
+                    <p class="date" data-i18n="experience.volunteer.croixrouge.date">2023 - Aujourd'hui</p>
+                    <p class="description" data-i18n="experience.volunteer.croixrouge.desc">Bénévole au sein de l'unité locale de Paris, participant aux actions de solidarité et d'aide aux personnes vulnérables.</p>
+                    <ul>
+                        <li data-i18n="experience.volunteer.croixrouge.point1">Participation aux maraudes et distributions alimentaires</li>
+                        <li data-i18n="experience.volunteer.croixrouge.point2">Soutien logistique lors des opérations d'urgence</li>
+                        <li data-i18n="experience.volunteer.croixrouge.point3">Formation aux premiers secours</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-card volunteer">
+                    <h3 data-i18n="experience.volunteer.mentor.title">Mentorat Étudiant</h3>
+                    <p class="date" data-i18n="experience.volunteer.mentor.date">2022 - Aujourd'hui</p>
+                    <p class="description" data-i18n="experience.volunteer.mentor.desc">Accompagnement d'étudiants de première année dans leur intégration et leur parcours académique.</p>
+                    <ul>
+                        <li data-i18n="experience.volunteer.mentor.point1">Soutien pédagogique et méthodologique</li>
+                        <li data-i18n="experience.volunteer.mentor.point2">Organisation de sessions d'étude collectives</li>
+                        <li data-i18n="experience.volunteer.mentor.point3">Aide à l'orientation professionnelle</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-card volunteer">
+                    <h3 data-i18n="experience.volunteer.secours.title">Le Secours Populaire, Paris (75)</h3>
+                    <p class="date" data-i18n="experience.volunteer.secours.date">2021</p>
+                    <p class="description" data-i18n="experience.volunteer.secours.desc">Compétences en communication, travail d'équipe, sens de l'organisation et capacité d'adaptation.</p>
+                    <ul>
+                        <li data-i18n="experience.volunteer.secours.point1">Aide aux personnes en difficulté</li>
+                        <li data-i18n="experience.volunteer.secours.point2">Organisation d'événements caritatifs</li>
+                        <li data-i18n="experience.volunteer.secours.point3">Collecte et distribution de dons</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-card volunteer">
+                    <h3 data-i18n="experience.volunteer.logo.title">Concours de logo - Cité scolaire Camille Sée</h3>
+                    <p class="date" data-i18n="experience.volunteer.logo.date">2017</p>
+                    <p class="description" data-i18n="experience.volunteer.logo.desc">Création et lauréat d'un logo pour le collège et le lycée dans le cadre d'un concours en respectant une charte visuelle imposée.</p>
+                    <ul>
+                        <li data-i18n="experience.volunteer.logo.point1">Logo officiellement utilisé par l'établissement</li>
+                        <li data-i18n="experience.volunteer.logo.point2">Premier prix du concours</li>
+                        <li data-i18n="experience.volunteer.logo.point3">Respect d'une charte graphique imposée</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="experience-section">
+                <h2 data-i18n="experience.academic">Projets Académiques</h2>
+                
+                <div class="experience-card">
+                    <h3 data-i18n="experience.click.journey.title">Click Journey</h3>
+                    <p class="date" data-i18n="experience.click.journey.date">Jan-Mai 2025</p>
+                    <p class="description" data-i18n="experience.click.journey.desc">Développement d'un site web d'agence de voyages avec structure technique de gestion.</p>
+                    <ul>
+                        <li data-i18n="project.click-journey.point1">Développement full-stack d'une plateforme de réservation de voyages</li>
+                        <li data-i18n="project.click-journey.point2">Implémentation d'authentification utilisateur et système de réservation</li>
+                        <li data-i18n="project.click-journey.point3">Intégration de traitement de paiement et gestion des réservations</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-label" data-i18n="tech.html">HTML</span>
+                        <span class="tech-label" data-i18n="tech.css">CSS</span>
+                        <span class="tech-label" data-i18n="tech.php">PHP</span>
+                        <span class="tech-label" data-i18n="tech.javascript">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <h3 data-i18n="project.c-wire.title">Projet C-Wire</h3>
+                    <p class="date" data-i18n="project.c-wire.date">Nov. - Déc. 2024</p>
+                    <p class="description" data-i18n="project.c-wire.desc">Développement d'un programme de synthèse de données pour un système de distribution d'électricité en France.</p>
+                    <ul>
+                        <li data-i18n="project.c-wire.point1">Automatisation des processus de traitement de données</li>
+                        <li data-i18n="project.c-wire.point2">Scripts Shell sous environnement Unix/Linux</li>
+                        <li data-i18n="project.c-wire.point3">Travail en équipe de trois</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-label" data-i18n="tech.c">C</span>
+                        <span class="tech-label" data-i18n="tech.shell">Shell</span>
+                        <span class="tech-label" data-i18n="tech.unix">Unix/Linux</span>
+                    </div>
+                </div>
+                
+                <div class="experience-item highlight">
+                    <h3 data-i18n="project.robot.title">Combat de Robots</h3>
+                    <p class="date" data-i18n="project.robot.date">2021</p>
+                    <p class="description" data-i18n="project.robot.desc">Construction d'un robot et participation à un combat officiel. Projet alliant programmation, automatisation et gestion d'équipe.</p>
+                    <ul>
+                        <li data-i18n="project.robot.point1">Construction complète du robot</li>
+                        <li data-i18n="project.robot.point2">Programmation des automatismes</li>
+                        <li data-i18n="project.robot.point3">Coordination d'équipe</li>
+                        <li data-i18n="project.robot.point4">Participation à une compétition officielle</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-label" data-i18n="tech.robotics">Robotique</span>
+                        <span class="tech-label" data-i18n="tech.automation">Automatisation</span>
+                        <span class="tech-label" data-i18n="tech.project-management">Gestion de Projet</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <h3 data-i18n="project.isolation.title">Projet Isolation énergétique</h3>
+                    <p class="date" data-i18n="project.isolation.date">2022-2023</p>
+                    <p class="description" data-i18n="project.isolation.desc">Solution d'amélioration de l'isolation de l'école selon la méthode SMART.</p>
+                    <ul>
+                        <li data-i18n="project.isolation.point1">Réalisé dans l'agglomération de Cergy-Pontoise</li>
+                        <li data-i18n="project.isolation.point2">Travail en équipe de six</li>
+                        <li data-i18n="project.isolation.point3">Implémentation de solutions d'efficacité énergétique</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span>Méthode SMART</span>
+                        <span>Efficacité Énergétique</span>
+                        <span>Gestion de Projet</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <style>
+        .filter-controls {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .filter-controls label {
+            margin-right: 1rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .sort-select {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--primary-color);
+            background-color: white;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sort-select:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .sort-select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .tech-stack span {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .tech-stack span:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .experience-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .experience-item.highlight {
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .experience-item h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .experience-item .date {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item .description {
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        .experience-item li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .experience-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .experience-card.highlight {
+            border-left: 4px solid #007bff;
+        }
+
+        .experience-card.volunteer {
+            border-left: 4px solid #28a745;
+        }
+
+        .title-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .experience-header h3 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .experience-header h4 {
+            color: #546e7a;
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+            background: #f8f9fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+        }
+
+        .role-description {
+            color: #546e7a;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .achievement-list li {
+            margin: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #37474f;
+        }
+
+        .achievement-list li i {
+            position: absolute;
+            left: 0;
+            color: #28a745;
+        }
+
+        .github-card {
+            background: #2b3137;
+            color: white;
+        }
+
+        .github-content {
+            text-align: center;
+        }
+
+        .github-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .github-button {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .github-button:hover {
+            background: #218838;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin: 2rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .experience-section-title {
+            color: #2c3e50;
+            margin: 3rem 0 2rem 0;
+        }
+
+        .experience-content {
+            padding: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .title-wrap {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .date {
+                margin-top: 0.5rem;
+            }
+
+            .github-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    <script src="experience.js"></script>
+</body>
+</html>

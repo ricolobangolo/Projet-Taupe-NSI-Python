@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendez-vous avec Adem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .calendar-cell {
+            height: 100px;
+            width: 14.28%;
+            border: 1px solid #dee2e6;
+            padding: 5px;
+            vertical-align: top;
+        }
+        .calendar-header {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .past-date {
+            background-color: #f8f9fa;
+            color: #aaa;
+        }
+        .current-date {
+            background-color: #e7f5ff;
+        }
+        .weekend {
+            background-color: #f8f9fa;
+        }
+        .time-slot {
+            margin: 2px 0;
+            padding: 5px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .time-slot:hover {
+            background-color: #e9ecef;
+        }
+        .time-slot.selected {
+            background-color: #007bff;
+            color: white;
+        }
+        .time-slot.unavailable {
+            background-color: #dc3545;
+            color: white;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../about.html">À propos</a></li>
+            <li><a href="../experience.html">Expérience</a></li>
+            <li><a href="../skills.html">Compétences</a></li>
+            <li><a href="../projets.html">Projets</a></li>
+            <li><a href="../diplomes.html">Diplômes</a></li>
+            <li><a href="../pourquoi-moi.html">Pourquoi moi ?</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Rendez-vous avec Adem</h1>
+
+        <div class="row">
+            <!-- Calendrier -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button id="prevMonth" class="btn btn-outline-primary">&lt;</button>
+                            <h3 id="currentMonth" class="mb-0">Avril 2025</h3>
+                            <button id="nextMonth" class="btn btn-outline-primary">&gt;</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Lun</th>
+                                    <th>Mar</th>
+                                    <th>Mer</th>
+                                    <th>Jeu</th>
+                                    <th>Ven</th>
+                                    <th>Sam</th>
+                                    <th>Dim</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendarBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0">Prendre rendez-vous</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="https://formspree.io/f/mjkyaqkr" method="POST" id="appointmentForm">
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="date" name="date" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="time" class="form-label">Heure</label>
+                                <div id="timeSlots" class="d-flex flex-wrap gap-2">
+                                    <!-- Les créneaux horaires seront générés ici -->
+                                </div>
+                                <input type="hidden" id="selectedTime" name="time" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <input type="hidden" name="_subject" value="Nouveau rendez-vous">
+                            <input type="hidden" name="_cc" value="wassim.houidi.last.day@gmail.com">
+
+                            <button type="submit" class="btn btn-primary w-100">Confirmer le rendez-vous</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class AppointmentSystem {
+            constructor() {
+                this.currentDate = new Date(); // Utilise la date actuelle
+                this.selectedDate = new Date(this.currentDate);
+                this.appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+                this.initializeSystem();
+            }
+
+            initializeSystem() {
+                this.updateCalendar();
+                this.generateTimeSlots();
+                this.addEventListeners();
+                this.setMinDate();
+            }
+
+            addEventListeners() {
+                document.getElementById('prevMonth').addEventListener('click', () => this.changeMonth(-1));
+                document.getElementById('nextMonth').addEventListener('click', () => this.changeMonth(1));
+                document.getElementById('date').addEventListener('change', () => this.updateTimeSlots());
+                document.getElementById('appointmentForm').addEventListener('submit', (e) => this.handleSubmit(e));
+            }
+
+            setMinDate() {
+                const dateInput = document.getElementById('date');
+                dateInput.min = this.currentDate.toISOString().split('T')[0];
+            }
+
+            updateCalendar() {
+                const firstDay = new Date(this.selectedDate.getFullYear(), this.selectedDate.getMonth(), 1);
+                const lastDay = new Date(this.selectedDate.getFullYear(), this.selectedDate.getMonth() + 1, 0);
+                
+                document.getElementById('currentMonth').textContent = 
+                    this.selectedDate.toLocaleString('fr-FR', { month: 'long', year: 'numeric' });
+
+                const calendarBody = document.getElementById('calendarBody');
+                calendarBody.innerHTML = '';
+
+                let date = new Date(firstDay);
+                date.setDate(firstDay.getDate() - (firstDay.getDay() || 7) + 1);
+
+                while (date <= lastDay || date.getDay() !== 1) {
+                    let week = document.createElement('tr');
+                    
+                    for (let i = 0; i < 7; i++) {
+                        let cell = document.createElement('td');
+                        cell.classList.add('calendar-cell');
+
+                        if (date.getMonth() === this.selectedDate.getMonth()) {
+                            cell.textContent = date.getDate();
+                            
+                            if (this.isToday(date)) {
+                                cell.classList.add('current-date');
+                            }
+                            
+                            if (!this.isPastDate(date) && !this.isWeekend(date)) {
+                                cell.style.cursor = 'pointer';
+                                cell.addEventListener('click', () => this.selectDate(new Date(date)));
+                            }
+                        }
+
+                        if (this.isPastDate(date) || this.isWeekend(date)) {
+                            cell.classList.add('past-date');
+                        }
+
+                        week.appendChild(cell);
+                        date.setDate(date.getDate() + 1);
+                    }
+                    
+                    calendarBody.appendChild(week);
+                }
+            }
+
+            generateTimeSlots() {
+                const timeSlotsContainer = document.getElementById('timeSlots');
+                timeSlotsContainer.innerHTML = '';
+
+                for (let hour = 9; hour < 18; hour++) {
+                    for (let minutes of ['00', '30']) {
+                        const timeString = `${hour.toString().padStart(2, '0')}:${minutes}`;
+                        const slot = document.createElement('div');
+                        slot.classList.add('time-slot');
+                        slot.textContent = timeString;
+                        slot.addEventListener('click', () => this.selectTimeSlot(slot, timeString));
+                        timeSlotsContainer.appendChild(slot);
+                    }
+                }
+            }
+
+            selectTimeSlot(slot, time) {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                slot.classList.add('selected');
+                document.getElementById('selectedTime').value = time;
+            }
+
+            selectDate(date) {
+                // Ne fait rien - on ne modifie plus la date lors du clic sur une case
+            }
+
+            updateTimeSlots() {
+                const selectedDate = document.getElementById('date').value;
+                document.querySelectorAll('.time-slot').forEach(slot => {
+                    slot.classList.remove('unavailable', 'selected');
+                });
+                document.getElementById('selectedTime').value = '';
+            }
+
+            handleSubmit(event) {
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('selectedTime').value;
+
+                if (!this.validateAppointment(new Date(date), time)) {
+                    event.preventDefault();
+                    return;
+                }
+
+                // Le formulaire sera envoyé à Formspree
+            }
+
+            validateAppointment(date, time) {
+                if (this.isPastDate(date)) {
+                    alert('Cette date est déjà passée');
+                    return false;
+                }
+
+                if (this.isWeekend(date)) {
+                    alert('Les rendez-vous ne sont pas disponibles le weekend');
+                    return false;
+                }
+
+                if (!time) {
+                    alert('Veuillez sélectionner une heure de rendez-vous');
+                    return false;
+                }
+
+                return true;
+            }
+
+            changeMonth(delta) {
+                this.selectedDate.setMonth(this.selectedDate.getMonth() + delta);
+                this.updateCalendar();
+            }
+
+            isToday(date) {
+                return date.toDateString() === this.currentDate.toDateString();
+            }
+
+            isWeekend(date) {
+                return date.getDay() === 0 || date.getDay() === 6;
+            }
+
+            isPastDate(date) {
+                return new Date(date).setHours(0, 0, 0, 0) < this.currentDate.setHours(0, 0, 0, 0);
+            }
+        }
+
+        // Initialisation du système
+        document.addEventListener('DOMContentLoaded', () => {
+            new AppointmentSystem();
+        });
+    </script>
+    <script src="../translations.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>

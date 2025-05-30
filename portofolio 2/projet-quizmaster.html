@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Projet Détail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="project-detail">
+            <div class="project-header">
+                <h2 data-i18n="projects.quizmaster.title">QuizMaster</h2>
+                <div class="project-date">Mars 2025</div>
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="project-description">
+
+                <section class="project-process">
+                    <h3 data-i18n="projectDetail.processTitle">Processus de Développement</h3>
+                    <p>
+                        Le développement de QuizMaster a suivi une approche de développement logiciel standard.
+                        Nous avons commencé par la définition des fonctionnalités clés (création de quiz, modes de jeu, gestion des utilisateurs).
+                        La conception de la base de données a été cruciale pour stocker les questions, les réponses, les utilisateurs et les scores.
+                        Le développement frontend a impliqué la création d'une interface utilisateur intuitive en utilisant HTML, CSS et JavaScript.
+                        Le backend a été développé pour gérer la logique des quiz, l'authentification des utilisateurs et l'interaction avec la base de données.
+                        Des défis ont été rencontrés dans la gestion de la simultanéité des joueurs et l'optimisation des requêtes de base de données.
+                        Des tests unitaires et d'intégration ont été réalisés pour assurer la qualité du code.
+                    </p>
+                </section>
+
+                <section class="project-casestudy">
+                    <h3 data-i18n="projectDetail.caseStudyTitle">Étude de Cas : Création d'une Plateforme de Quiz Interactive</h3>
+                    <p>
+                        Le problème était de créer une plateforme en ligne permettant aux utilisateurs de créer et de participer à des quiz de manière interactive.
+                        La solution a été de développer une application web full-stack avec une base de données pour gérer le contenu et les interactions des utilisateurs.
+                        L'objectif était de fournir une expérience ludique et éducative pour les utilisateurs.
+                        Le principal résultat est une plateforme QuizMaster fonctionnelle où les utilisateurs peuvent créer, partager et jouer à des quiz sur divers sujets.
+                        Ce projet a renforcé mes compétences en développement web full-stack, en conception de bases de données, en gestion d'état d'application et en développement d'interfaces utilisateur interactives.
+                    </p>
+                </section>
+
+                <h3 data-i18n="projects.quizmaster.description.title">Description du projet</h3>
+                <p data-i18n="projects.quizmaster.description.content">
+                    Application web interactive de quiz avec système d'administration complet. Le projet propose des quiz 
+                    dans différentes catégories (informatique, mathématiques, culture générale) avec un système de suivi 
+                    des scores et un classement des joueurs.
+                </p>
+
+                <h3 data-i18n="projects.quizmaster.features.title">Fonctionnalités principales</h3>
+                <ul>
+                    <li data-i18n="projects.quizmaster.features.point1">Interface responsive et moderne</li>
+                    <li data-i18n="projects.quizmaster.features.point2">Système de quiz interactif avec timer</li>
+                    <li data-i18n="projects.quizmaster.features.point3">Espace administrateur sécurisé</li>
+                    <li data-i18n="projects.quizmaster.features.point4">Classement et suivi des scores</li>
+                </ul>
+
+                <h3 data-i18n="projects.quizmaster.tech.title">Technologies utilisées</h3>
+                <ul>
+                    <li data-i18n="projects.quizmaster.tech.frontend">Frontend : HTML5, CSS3, JavaScript</li>
+                    <li data-i18n="projects.quizmaster.tech.bootstrap">Framework CSS : Bootstrap 5</li>
+                    <li data-i18n="projects.quizmaster.tech.storage">Stockage local avec LocalStorage</li>
+                    <li data-i18n="projects.quizmaster.tech.responsive">Design responsive et adaptatif</li>
+                </ul>
+
+                <h3 data-i18n="projects.quizmaster.skills.title">Compétences développées</h3>
+                <ul>
+                    <li data-i18n="projects.quizmaster.skills.js">Programmation JavaScript avancée</li>
+                    <li data-i18n="projects.quizmaster.skills.ui">Conception d'interfaces utilisateur intuitives</li>
+                    <li data-i18n="projects.quizmaster.skills.data">Gestion des données et persistance</li>
+                    <li data-i18n="projects.quizmaster.skills.security">Sécurisation des accès administrateur</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="site_quizz/quiz-site.html" class="cta-button primary">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="projects.quizmaster.tryQuiz">Essayer le quiz →</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="projets.html" class="cta-button secondary" data-i18n="projects.backToProjects">← Retour aux projets</a>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Rendez-vous - Projet Détail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="project-detail">
+            <div class="project-header">
+                <h2 data-i18n="projects.appointments.title">Système de Rendez-vous</h2>
+                <div class="project-date">Avril 2025</div>
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h3 data-i18n="projects.appointments.description.title">Description du projet</h3>
+                <p data-i18n="projects.appointments.description.content">
+                    Application web moderne permettant aux utilisateurs de planifier des rendez-vous en ligne 
+                    de manière intuitive et efficace. Le système offre une expérience utilisateur fluide avec 
+                    un calendrier interactif et une gestion intelligente des créneaux horaires.
+                </p>
+
+                <h3 data-i18n="projects.appointments.features.title">Fonctionnalités principales</h3>
+                <ul>
+                    <li data-i18n="projects.appointments.calendar">Calendrier interactif avec sélection de dates</li>
+                    <li data-i18n="projects.appointments.slots">Gestion dynamique des créneaux horaires</li>
+                    <li data-i18n="projects.appointments.form">Formulaire de prise de rendez-vous intuitif</li>
+                    <li data-i18n="projects.appointments.responsive">Interface responsive adaptée à tous les appareils</li>
+                    <li data-i18n="projects.appointments.validation">Validation en temps réel des disponibilités</li>
+                    <li data-i18n="projects.appointments.email">Confirmation par email des rendez-vous</li>
+                </ul>
+
+                <h3 data-i18n="projects.appointments.tech.title">Technologies utilisées</h3>
+                <ul>
+                    <li data-i18n="projects.appointments.tech.html">HTML5 pour la structure de la page</li>
+                    <li data-i18n="projects.appointments.tech.css">CSS3 et Bootstrap 5 pour le design responsive</li>
+                    <li data-i18n="projects.appointments.tech.js">JavaScript pour l'interactivité et la gestion du calendrier</li>
+                    <li data-i18n="projects.appointments.tech.formspree">Intégration avec Formspree pour la gestion des formulaires</li>
+                    <li data-i18n="projects.appointments.tech.git">Git pour le contrôle de version</li>
+                </ul>
+
+                <h3 data-i18n="projects.appointments.skills.title">Compétences développées</h3>
+                <ul>
+                    <li data-i18n="projects.appointments.skills.ui">Développement d'interfaces utilisateur intuitives</li>
+                    <li data-i18n="projects.appointments.skills.js">Gestion avancée des événements JavaScript</li>
+                    <li data-i18n="projects.appointments.skills.dom">Manipulation du DOM et gestion de l'état</li>
+                    <li data-i18n="projects.appointments.skills.responsive">Design responsive et adaptable</li>
+                    <li data-i18n="projects.appointments.skills.testing">Tests et débogage d'applications web</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="autre_projets/rdv_adem.html" class="cta-button primary">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="projects.appointments.cta">Accéder au système de rendez-vous</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="projets.html" class="cta-button secondary" data-i18n="projects.backToProjects">← Retour aux projets</a>
+        </div>
+    </div>
+
+    <section class="project-process container">
+        <h3 class="page-title" data-i18n="projectDetail.processTitle">Processus de Développement</h3>
+        <p>
+            Le développement du système de rendez-vous a suivi une approche méthodique et centrée sur l'utilisateur.
+            Nous avons commencé par une phase d'analyse des besoins, identifiant les fonctionnalités essentielles comme la sélection de dates, la gestion des créneaux et les notifications.
+            La conception de l'interface utilisateur a été réalisée en utilisant Bootstrap pour garantir une expérience responsive et intuitive.
+            Le développement frontend a impliqué la création d'un calendrier interactif en JavaScript et l'implémentation de la validation en temps réel des formulaires.
+            L'intégration avec Formspree a permis de gérer efficacement les soumissions de formulaires et les notifications par email.
+            Des défis ont été rencontrés lors de la gestion des fuseaux horaires et de la synchronisation des disponibilités.
+            Des tests approfondis ont été effectués pour assurer la fiabilité du système et une expérience utilisateur optimale.
+        </p>
+    </section>
+
+    <section class="project-casestudy container">
+        <h3 class="page-title" data-i18n="projectDetail.caseStudyTitle">Étude de Cas : Simplification de la Prise de Rendez-vous en Ligne</h3>
+        <p>
+            Le problème était de créer un système de prise de rendez-vous en ligne qui soit à la fois simple d'utilisation et robuste, permettant aux utilisateurs de planifier des rendez-vous sans friction.
+            La solution technique a été de développer une application web moderne avec un calendrier interactif, une gestion dynamique des créneaux et un système de validation en temps réel.
+            L'objectif était de réduire le temps nécessaire pour prendre un rendez-vous tout en minimisant les erreurs de saisie.
+            Le principal résultat est une plateforme intuitive qui permet aux utilisateurs de réserver des rendez-vous en quelques clics, avec des confirmations automatiques par email.
+            Ce projet a renforcé mes compétences en développement frontend, en gestion d'événements JavaScript et en conception d'interfaces utilisateur centrées sur l'expérience utilisateur.
+        </p>
+    </section>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html>

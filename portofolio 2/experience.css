@@ -1,0 +1,153 @@
+/* Styles pour l'animation de tri */
+main.sorting .experience-card,
+main.sorting .experience-item {
+    opacity: 0.5;
+    transform: scale(0.98);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* Désactiver les interactions pendant le tri */
+}
+
+.experience-card,
+.experience-item {
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animation d'entrée pour les cartes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation au survol des cartes */
+.experience-card:hover,
+.experience-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid var(--primary-color, #007bff);
+}
+
+/* Animation spéciale pour les cartes de bénévolat */
+.experience-card.volunteer:hover {
+    border-left: 4px solid var(--accent-color, #28a745);
+}
+
+/* Animation des éléments internes */
+.experience-card h3,
+.experience-item h3 {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.experience-card:hover h3,
+.experience-item:hover h3 {
+    color: var(--primary-color, #007bff);
+    transform: translateX(5px);
+}
+
+.experience-card li,
+.experience-item li {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.85;
+}
+
+.experience-card:hover li,
+.experience-item:hover li {
+    opacity: 1;
+}
+
+/* Animation séquentielle des éléments de liste */
+.experience-card:hover li:nth-child(1) { transform: translateX(5px); transition-delay: 0.05s; }
+.experience-card:hover li:nth-child(2) { transform: translateX(5px); transition-delay: 0.1s; }
+.experience-card:hover li:nth-child(3) { transform: translateX(5px); transition-delay: 0.15s; }
+.experience-card:hover li:nth-child(4) { transform: translateX(5px); transition-delay: 0.2s; }
+.experience-card:hover li:nth-child(5) { transform: translateX(5px); transition-delay: 0.25s; }
+
+/* Indicateur visuel pour le tri actif */
+.filter-controls {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-color, white);
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    animation: slideDown 0.5s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filter-controls .sort-select {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color, #ddd);
+    background-color: var(--bg-color, white);
+    color: var(--text-color, #333);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.filter-controls .sort-select:hover {
+    border-color: var(--primary-color, #007bff);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-controls .sort-select:focus {
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb, 0, 123, 255), 0.25);
+    border-color: var(--primary-color, #007bff);
+}
+
+/* Style pour les sections d'expérience */
+.experience-section {
+    margin-bottom: 3rem;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.experience-section h2 {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 0.8rem;
+    color: var(--primary-color, #007bff);
+}
+
+.experience-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color, #007bff);
+    border-radius: 3px;
+}

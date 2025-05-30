@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Wire - Projet Détail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="project-detail">
+            <div class="project-header">
+                <h2 data-i18n="projects.cwire.title">C-Wire</h2>
+                <div class="project-date">Nov. - Déc. 2024</div>
+                <div class="tech-stack">
+                    <span>C</span>
+                    <span>Shell</span>
+                    <span>Unix/Linux</span>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <section class="project-process">
+                    <h3 data-i18n="projectDetail.processTitle">Processus de Développement</h3>
+                    <p>
+                        Le développement de C-Wire a été un exercice de programmation système en C et Shell, réalisé en équipe.
+                        Nous avons commencé par analyser les besoins pour la synthèse de données et concevoir l'architecture du programme.
+                        La phase de codage en C a impliqué la manipulation de fichiers, le traitement de données et l'implémentation d'algorithmes d'analyse.
+                        Parallèlement, nous avons développé des scripts Shell pour automatiser l'exécution du programme et gérer les fichiers d'entrée/sortie dans un environnement Unix/Linux.
+                        La collaboration a nécessité l'utilisation de Git pour le suivi des versions et la fusion du code.
+                        Des défis ont inclus l'optimisation des performances pour traiter de grands volumes de données et la gestion des erreurs.
+                        Les tests ont été effectués pour valider la précision des résultats de synthèse.
+                    </p>
+                </section>
+
+                <section class="project-casestudy">
+                    <h3 data-i18n="projectDetail.caseStudyTitle">Étude de Cas : Synthèse de Données pour Réseau Électrique</h3>
+                    <p>
+                        Le problème à résoudre était la nécessité d'un outil efficace pour synthétiser les données complexes d'un système de distribution d'électricité.
+                        La solution technique a été de créer un programme en C optimisé pour le traitement des données brutes et des scripts Shell pour automatiser le flux de travail.
+                        L'objectif était de fournir une sortie synthétisée et utilisable pour l'analyse.
+                        Le principal résultat est un programme fonctionnel capable d'ingérer des données brutes et de produire des rapports synthétisés.
+                        Ce projet a renforcé mes compétences en programmation système (C, Shell) et m'a appris l'importance de l'automatisation et de l'efficacité dans le traitement des données à grande échelle.
+                    </p>
+                </section>
+
+                <h3 data-i18n="projects.cwire.description.title">Description du projet</h3>
+                <p data-i18n="projects.cwire.description.content">
+                    Développement d'un programme de synthèse de données pour un système de distribution d'électricité en France. 
+                    Ce projet a été réalisé dans le cadre de mes études à CY-TECH.
+                </p>
+
+                <h3 data-i18n="projects.cwire.features.title">Caractéristiques principales</h3>
+                <ul>
+                    <li data-i18n="projects.cwire.features.point1">Réalisé en C avec scripts Shell sous environnement Unix/Linux</li>
+                    <li data-i18n="projects.cwire.features.point2">Automatisation des processus de traitement de données</li>
+                    <li data-i18n="projects.cwire.features.point3">Développement d'algorithmes d'analyse de données</li>
+                    <li data-i18n="projects.cwire.features.point4">Travail en équipe de trois</li>
+                </ul>
+
+                <div class="project-images">
+                    <img src="Screenshot 2025-03-16 at 00-15-28 Projet_C-Wire_preIng2_2024_2025-v1.4-1.pdf.png" alt="C-Wire Screenshot 1" class="project-image">
+                    <img src="Screenshot 2025-03-16 at 00-15-52 Projet_C-Wire_preIng2_2024_2025-v1.4-1.pdf.png" alt="C-Wire Screenshot 2" class="project-image">
+                </div>
+
+                <h3 data-i18n="projects.cwire.skills.title">Compétences développées</h3>
+                <ul>
+                    <li data-i18n="projects.cwire.skills.point1">Programmation en C et Shell scripting</li>
+                    <li data-i18n="projects.cwire.skills.point2">Manipulation de fichiers et données</li>
+                    <li data-i18n="projects.cwire.skills.point3">Gestion de version avec Git</li>
+                    <li data-i18n="projects.cwire.skills.point4">Travail collaboratif</li>
+                </ul>
+            </div>
+
+            <a href="projets.html" class="cta-button secondary" data-i18n="projects.backToProjects">← Retour aux projets</a>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html>

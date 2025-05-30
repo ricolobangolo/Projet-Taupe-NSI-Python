@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Taupe - Projet Détail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <button class="theme-toggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switcher">
+            <button class="lang-switcher-btn">
+                <i class="fas fa-globe"></i> FR
+            </button>
+            <div class="lang-options">
+                <div class="lang-option" data-lang="fr">Français</div>
+                <div class="lang-option" data-lang="en">English</div>
+            </div>
+        </div>
+        <button class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Expérience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="projets.html" data-i18n="nav.projects">Projets</a></li>
+            <li><a href="diplomes.html" data-i18n="nav.diplomas">Diplômes</a></li>
+            <li><a href="pourquoi-moi.html" data-i18n="nav.whyme">Pourquoi moi ?</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="project-detail">
+            <div class="project-header">
+                <h2 data-i18n="projects.whackamole.title">Jeu de Taupe en Python</h2>
+                <div class="project-date">2024</div>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Pygame</span>
+                    <span>POO</span>
+                    <span>Interface Graphique</span>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h3 data-i18n="projects.whackamole.description.title">Description du projet</h3>
+                <p data-i18n="projects.whackamole.description.content">
+                    Développement d'un jeu de taupe interactif en Python dans le cadre du cours de NSI (Numérique et Sciences Informatiques).
+                    Ce projet a permis de mettre en pratique les concepts de programmation orientée objet et de développement de jeux vidéo
+                    tout en créant une expérience de jeu amusante et engageante.
+                </p>
+
+                <h3 data-i18n="projects.whackamole.features.title">Fonctionnalités principales</h3>
+                <ul>
+                    <li data-i18n="projects.whackamole.features.point1">Interface graphique interactive avec Pygame</li>
+                    <li data-i18n="projects.whackamole.features.point2">Système de score et de niveaux de difficulté</li>
+                    <li data-i18n="projects.whackamole.features.point3">Animations fluides et effets sonores</li>
+                    <li data-i18n="projects.whackamole.features.point4">Gestion des événements utilisateur</li>
+                    <li data-i18n="projects.whackamole.features.point5">Système de sauvegarde des meilleurs scores</li>
+                    <li data-i18n="projects.whackamole.features.point6">Différents types de taupes avec comportements variés</li>
+                </ul>
+
+                <h3 data-i18n="projects.whackamole.tech.title">Technologies utilisées</h3>
+                <ul>
+                    <li data-i18n="projects.whackamole.tech.python">Python 3.x pour le développement</li>
+                    <li data-i18n="projects.whackamole.tech.pygame">Pygame pour l'interface graphique</li>
+                    <li data-i18n="projects.whackamole.tech.oop">Programmation Orientée Objet</li>
+                    <li data-i18n="projects.whackamole.tech.json">JSON pour la persistance des données</li>
+                    <li data-i18n="projects.whackamole.tech.git">Git pour le contrôle de version</li>
+                </ul>
+
+                <h3 data-i18n="projects.whackamole.skills.title">Compétences développées</h3>
+                <ul>
+                    <li data-i18n="projects.whackamole.skills.point1">Développement de jeux vidéo avec Python</li>
+                    <li data-i18n="projects.whackamole.skills.point2">Conception orientée objet</li>
+                    <li data-i18n="projects.whackamole.skills.point3">Gestion des événements et des interactions utilisateur</li>
+                    <li data-i18n="projects.whackamole.skills.point4">Optimisation des performances</li>
+                    <li data-i18n="projects.whackamole.skills.point5">Gestion des ressources graphiques et sonores</li>
+                    <li data-i18n="projects.whackamole.skills.point6">Tests et débogage de jeux</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="https://github.com/ricolobangolo/Projet-Taupe-NSI-Python" class="cta-button primary" target="_blank">
+                        <i class="fab fa-github"></i> <span>Voir sur GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="projets.html" class="cta-button secondary" data-i18n="projects.backToProjects">← Retour aux projets</a>
+        </div>
+    </div>
+
+    <section class="project-process container">
+        <h3 class="page-title" data-i18n="projectDetail.processTitle">Processus de Développement</h3>
+        <p>
+            Le développement du jeu de taupe a suivi une approche structurée et itérative.
+            La première phase a consisté en la conception de l'architecture orientée objet,
+            définissant les classes principales pour les taupes, le joueur et le gestionnaire de jeu.
+            L'implémentation a commencé par la création de l'interface graphique de base avec Pygame,
+            suivie par l'ajout des mécaniques de jeu fondamentales.
+            Des défis techniques ont été rencontrés dans la gestion des collisions et l'optimisation
+            des performances avec de nombreuses entités à l'écran.
+            La solution a impliqué l'utilisation de techniques de spatial partitioning et
+            l'optimisation des boucles de jeu.
+            Des tests approfondis ont été effectués pour assurer une expérience de jeu fluide
+            et sans bugs, avec une attention particulière portée à la jouabilité.
+            Le projet a été enrichi progressivement avec des fonctionnalités additionnelles
+            comme les effets sonores, les animations et le système de sauvegarde des scores.
+        </p>
+    </section>
+
+    <section class="project-casestudy container">
+        <h3 class="page-title" data-i18n="projectDetail.caseStudyTitle">Étude de Cas : Création d'un Jeu Vidéo Éducatif en Python</h3>
+        <p>
+            Le défi initial était de créer un jeu vidéo éducatif qui démontre l'application pratique
+            des concepts de programmation tout en restant divertissant.
+            La solution technique a été le développement d'un jeu de taupe moderne utilisant Python et Pygame,
+            avec une architecture orientée objet modulaire et extensible.
+            L'objectif était de créer une expérience de jeu engageante qui illustre les principes
+            de développement de jeux vidéo tout en servant d'outil pédagogique.
+            Les résultats ont dépassé les attentes, avec un jeu qui combine plaisir de jeu
+            et valeur éducative, démontrant l'application pratique des concepts de NSI.
+            Ce projet a renforcé mes compétences en développement de jeux vidéo,
+            en programmation orientée objet et en gestion de projet,
+            tout en créant une base solide pour de futurs projets de développement de jeux.
+        </p>
+    </section>
+
+    <script src="translations.js"></script>
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html> 
